@@ -15,9 +15,10 @@ div,
 section,
 article,
 select {
-    display: 'block';
+    display: 'inline-block';
     width: 100%;
     font-family: sans-serif;
     font-size: 1em;
     margin: 0.5em;
 }
+

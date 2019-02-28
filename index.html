@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>toDo app vue.js</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        .done{
+            text-decoration: line-through;
+        }
+        .red{
+            background-color: red
+        }
+    </style>
 </head>
 
 <body>
@@ -16,6 +24,14 @@
         <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="">
         <button type="submit" name="button">Add</button>
     </form>
+    <button @click="allDone" type="button" name="button">All Done</button>
+    <ul >
+        <li v-for="todo in todos">
+            <input type="checkbox" v-model="todo.done">
+            <span :class="{done: todo.done}">{{todo.title}}</span>
+            <button @click="removeTodo(todo)" type="button" class="red">Remove</button>
+        </li>
+    </ul>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>
