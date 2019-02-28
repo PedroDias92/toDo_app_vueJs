@@ -1,0 +1,24 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>toDo app vue.js</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <main id="app">
+        <h1>{{title}}</h1>
+        <form @submit.prevent="addTodo">
+        <label for="newTodo">New Todo</label>
+        <input v-model="newTodo" type="text" name="newTodo" id="newTodo" value="">
+        <button type="submit" name="button">Add</button>
+    </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
